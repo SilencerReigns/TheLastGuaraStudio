@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc6995eb81ba0b4c92dee4bc18c56eb, type: 3}
+  m_Name: Default Data
+  m_EditorClassIdentifier: Assembly-CSharp::Entities.EffectsData
+  defaultShaketime: 0.2
+  defaultShakeForce: 0.5
+  defaultShakeVelocity: {x: 1, y: 1, z: 0}
+  defaultLowFrequency: 0.8
+  defaultHighFrequency: 0.8
+  defaultRumbleDuration: 0.2
+  defaultHitstopDuration: 0.1
+  defaultMusicFadeInDuration: 5
+  defaultMusicFadeOutDuration: 1.5
+  defaultCutoffFrequency: 600
+  defaultMufflingDuration: 0.5
+  defaultMufflingEase: 1
+  defaultDemufflingDuration: 1.5
+  defaultDemufflingEase: 3
+  defaultFlashDuration: 0.1
+  defaultVignetteShowDuration: 0.1
+  defaultVignetteShowEase: 1
+  defaultVignetteShowIntensity: 0.5
+  defaultVignetteHideDuration: 1
+  defaultVignetteHideEase: 18
