@@ -5,6 +5,72 @@ TextureImporter:
   - first:
       213: 1764778769702874027
     second: BK_light_attack_3_0
+  - first:
+      213: -3760723483977178168
+    second: BK_light_attack_3_1
+  - first:
+      213: -3992461048614851925
+    second: BK_light_attack_3_2
+  - first:
+      213: -1417731354328521333
+    second: BK_light_attack_3_3
+  - first:
+      213: 7528617454094444113
+    second: BK_light_attack_3_4
+  - first:
+      213: 3294511434415995793
+    second: BK_light_attack_3_5
+  - first:
+      213: 1949554010118918331
+    second: BK_light_attack_3_6
+  - first:
+      213: -8197567272300369274
+    second: BK_light_attack_3_7
+  - first:
+      213: -7121429199321454244
+    second: BK_light_attack_3_8
+  - first:
+      213: 6126663906547798758
+    second: BK_light_attack_3_9
+  - first:
+      213: 3925542026652135049
+    second: BK_light_attack_3_10
+  - first:
+      213: 1359693449772429063
+    second: BK_light_attack_3_11
+  - first:
+      213: -3105217021499448578
+    second: BK_light_attack_3_12
+  - first:
+      213: 6821536137346726917
+    second: BK_light_attack_3_13
+  - first:
+      213: -5192380735916955889
+    second: BK_light_attack_3_14
+  - first:
+      213: 3009996482130849901
+    second: BK_light_attack_3_15
+  - first:
+      213: 7112923125487196756
+    second: BK_light_attack_3_16
+  - first:
+      213: -6578292183536396381
+    second: BK_light_attack_3_17
+  - first:
+      213: -7176414817195326417
+    second: BK_light_attack_3_18
+  - first:
+      213: 1144754282875780391
+    second: BK_light_attack_3_19
+  - first:
+      213: 5035144433415996766
+    second: BK_light_attack_3_20
+  - first:
+      213: -5539160453211285196
+    second: BK_light_attack_3_21
+  - first:
+      213: 716788976952906520
+    second: BK_light_attack_3_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +103,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +117,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,11 +170,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 512
-        height: 192
+        y: 128
+        width: 128
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -121,11 +187,231 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_3_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3221f9ae93fcbc0800000000000000
+      internalID: -3760723483977178168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_3_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa6ab944dde798c0800000000000000
+      internalID: -3992461048614851925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_3_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85a05e38d4335ce0800000000000000
+      internalID: -1417731354328521333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_3_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156ea19afa50b7860800000000000000
+      internalID: 7528617454094444113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_3_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19bf3dcc1b478bd20800000000000000
+      internalID: 3294511434415995793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_3_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb093930b053e0b10800000000000000
+      internalID: 1949554010118918331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_3_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68a2b289ff36c3e80800000000000000
+      internalID: -8197567272300369274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_3_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59a959cfd99b2d90800000000000000
+      internalID: -7121429199321454244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_3_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12f417217e42ea469f277945f19f113
+      internalID: 1964194441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_3_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e5caff7bd428643be54912815a5e2f
+      internalID: -2119121325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: add575c9c1cadc343aa698a55aef10a7
     internalID: 0
     vertices: []
     indices: 
@@ -133,9 +419,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":3.0},"gridSpriteSize":{"x":128.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       BK_light_attack_3_0: 1764778769702874027
+      BK_light_attack_3_1: -3760723483977178168
+      BK_light_attack_3_10: -2119121325
+      BK_light_attack_3_2: -3992461048614851925
+      BK_light_attack_3_3: -1417731354328521333
+      BK_light_attack_3_4: 7528617454094444113
+      BK_light_attack_3_5: 3294511434415995793
+      BK_light_attack_3_6: 1949554010118918331
+      BK_light_attack_3_7: -8197567272300369274
+      BK_light_attack_3_8: -7121429199321454244
+      BK_light_attack_3_9: 1964194441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

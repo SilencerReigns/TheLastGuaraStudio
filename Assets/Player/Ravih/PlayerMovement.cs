@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using System.Collections;
 
@@ -26,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     private float lastDashTime = -Mathf.Infinity;
 
+    // Variável para controlar a orientação do personagem
+    private bool isFacingRight = true;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -51,13 +53,25 @@ public class PlayerMovement : MonoBehaviour
 
         moveInput = new Vector2(horizontal, vertical).normalized;
 
+        // Inverte o lado do personagem com base no Input Horizontal (apenas se não estiver a fazer Dash)
+        if (!isDashing)
+        {
+            if (horizontal > 0f && !isFacingRight)
+            {
+                Flip();
+            }
+            else if (horizontal < 0f && isFacingRight)
+            {
+                Flip();
+            }
+        }
+
         if (Input.GetKeyDown(dashKey) &&
             Time.time >= lastDashTime + dashCooldown &&
             !isDashing)
         {
             StartCoroutine(Dash());
         }
-        Debug.Log("Update executando: " + Input.GetKey(KeyCode.D));
     }
 
     private void FixedUpdate()
@@ -69,6 +83,16 @@ public class PlayerMovement : MonoBehaviour
 
         ApplyBounds(ref newPosition);
         rb.MovePosition(newPosition);
+    }
+
+    // Método responsável por inverter a escala no eixo X
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1f;
+        transform.localScale = currentScale;
     }
 
     private IEnumerator Dash()
