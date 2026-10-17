@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7942161786386293187}
   - component: {fileID: 8736256343491250189}
   - component: {fileID: 4308757604452418613}
+  - component: {fileID: 8642679370414046710}
   m_Layer: 0
   m_Name: ThePlayer
   m_TagString: Player
@@ -156,3 +157,22 @@ MonoBehaviour:
   parryKey: 101
   parryDuration: 0.6
   parryCooldown: 2
+--- !u!114 &8642679370414046710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830811732788574845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774fb4567f9bbd54d95560860814e876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthPlayer
+  MaxHealth: 100
+  health: 0
+  potionKey: 113
+  potionHealAmount: 30
+  potionDrinkDuration: 1
+  potionCooldown: 10
+  playerMovement: {fileID: 0}
