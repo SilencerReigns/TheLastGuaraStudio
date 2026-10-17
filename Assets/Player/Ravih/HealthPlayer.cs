@@ -1,26 +1,24 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
+using HeyHeyThere.PixelBarsFree;
 
 public class HealthPlayer : MonoBehaviour
 {
     [Header("Health")]
-    //public Slider easeHealthSlider;
-    //public Slider healthSlider;
+    [SerializeField] private PixelStatBar healthBar;   // o orb de vida (Shape = Orb, Fill = health)
 
     public float MaxHealth = 100f;
     public float health;
 
-    //[SerializeField] private DeathCutscene deathScript;
-
-    private float lerpSpeed = 0.05f;
+   // [SerializeField] private DeathCutscene deathScript;
 
     [Header("Potion")]
     [SerializeField] private KeyCode potionKey = KeyCode.Q;
     [SerializeField] private float potionHealAmount = 30f;
-    [SerializeField] private float potionDrinkDuration = 1f; 
-    [SerializeField] private float potionCooldown = 10f;     
+    [SerializeField] private float potionDrinkDuration = 1f;   // tempo parado enquanto bebe
+    [SerializeField] private float potionCooldown = 10f;       // começa depois que termina de beber
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private PixelStatBar potionRing;          // anel de recarga (Shape = Ring)
 
     private bool isHealing;
     private bool isPotionOnCooldown;
@@ -40,24 +38,23 @@ public class HealthPlayer : MonoBehaviour
     {
         health = MaxHealth;
 
-       // healthSlider.maxValue = MaxHealth;
-      //  easeHealthSlider.maxValue = MaxHealth;
+        healthBar.maxValue = MaxHealth;
+        healthBar.value = health;
+        healthBar.Settle();
 
-       // healthSlider.value = health;
-       // easeHealthSlider.value = health;
+        // anel cheio = poção pronta
+        if (potionRing != null)
+        {
+            potionRing.trail = potionRing.flash = false;
+            potionRing.value = potionRing.maxValue;
+            potionRing.Settle();
+        }
     }
 
     private void Update()
     {
-        /*if (healthSlider.value != health)
-        {
-            healthSlider.value = health;
-        }
-
-        if (easeHealthSlider.value != health)
-        {
-            easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, health, lerpSpeed);
-        }*/
+        // o PixelStatBar já faz o flash e o rastro (trail) quando a vida cai
+        healthBar.value = health;
 
         if (Input.GetKeyDown(potionKey) &&
             !isHealing &&
@@ -71,7 +68,7 @@ public class HealthPlayer : MonoBehaviour
     {
         health = Mathf.Clamp(health - damage, 0f, MaxHealth);
 
-       /* if (health <= 0f)
+      /*  if (health <= 0f)
         {
             deathScript.DeathScene();
         }*/
@@ -87,6 +84,13 @@ public class HealthPlayer : MonoBehaviour
         isHealing = true;
         isPotionOnCooldown = true;
 
+        // anel esvazia na hora em que usa (Settle pula a animação de queda)
+        if (potionRing != null)
+        {
+            potionRing.value = 0f;
+            potionRing.Settle();
+        }
+
         if (playerMovement != null)
         {
             playerMovement.SetMovementLocked(true);
@@ -94,6 +98,7 @@ public class HealthPlayer : MonoBehaviour
 
         yield return new WaitForSeconds(potionDrinkDuration);
 
+        // se morreu durante o gole, não cura
         if (health > 0f)
         {
             Heal(potionHealAmount);
@@ -106,8 +111,25 @@ public class HealthPlayer : MonoBehaviour
             playerMovement.SetMovementLocked(false);
         }
 
-        yield return new WaitForSeconds(potionCooldown);
+        // recarga: o anel enche ao longo do cooldown
+        float elapsed = 0f;
+
+        while (elapsed < potionCooldown)
+        {
+            elapsed += Time.deltaTime;
+
+            if (potionRing != null)
+            {
+                potionRing.value = potionRing.maxValue * (elapsed / potionCooldown);
+            }
+
+            yield return null;
+        }
+
+        if (potionRing != null)
+        {
+            potionRing.value = potionRing.maxValue;
+        }
 
         isPotionOnCooldown = false;
-    }
-}
+}   }
