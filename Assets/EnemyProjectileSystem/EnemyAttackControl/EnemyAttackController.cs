@@ -39,10 +39,20 @@ public class EnemyAttackController : MonoBehaviour
     private float screenX = 11;
     private int activeAttacks = 0;
     [SerializeField]private int numberOfColums = 5;
+    private string targetTag = "Player";
     [SerializeField]private Transform player;
     private Coroutine mainCoroutine;
     private List<Coroutine> minorCoroutines = new List<Coroutine>();
 
+    public void Awake()
+    {
+        // Gets Player
+        player = GameObject.FindGameObjectWithTag(targetTag).GetComponent<Transform>();
+        if (player == null)
+        {
+            Debug.Log("Colocar Tag Player no objeto player!!!");
+        }
+    }
     public void Start()
     {
         if(player == null)
@@ -195,7 +205,9 @@ public class EnemyAttackController : MonoBehaviour
             case (int)AttackSpawning.TripleAttack:
                 TripleAttack(configure);
                 break;
-
+            case (int)AttackSpawning.HomingAttack:
+                HomingAttack(configure);
+                break;
             default:
                 Debug.LogError("Erro ao spawnar ataque!");
                 break;
