@@ -45,21 +45,6 @@ namespace Player
                 core.lastMoveDirection = direction;
         }
 
-        public void OnJump(InputAction.CallbackContext context)
-        {
-            if (inputsDisabled || jumpDisabled)
-                return;
-
-            if (context.performed)
-            {
-                core.jumpHeld = true;
-                inputBufferer.BufferInput(InputEnum.Jump);
-            }
-
-            else if (context.canceled)
-                core.jumpHeld = false;
-        }
-
         public void OnDash(InputAction.CallbackContext context)
         {
             if (inputsDisabled || dashDisabled)
@@ -69,6 +54,50 @@ namespace Player
             {
                 dashTimer = inputData.dashCooldown;
                 inputBufferer.BufferInput(InputEnum.Dash);
+            }
+        }
+
+        public void OnAttack(InputAction.CallbackContext context)
+        {
+            if (inputsDisabled)
+                return;
+
+            if (context.performed)
+            {
+                inputBufferer.BufferInput(InputEnum.Light_Attack);
+            }
+        }
+
+        public void OnHeavy(InputAction.CallbackContext context)
+        {
+            if (inputsDisabled)
+                return;
+
+            if (context.performed)
+            {
+                inputBufferer.BufferInput(InputEnum.Heavy_Attack);
+            }
+        }
+
+        public void OnHeal(InputAction.CallbackContext context)
+        {
+            if (inputsDisabled)
+                return;
+
+            if (context.performed)
+            {
+                inputBufferer.BufferInput(InputEnum.Heal);
+            }
+        }
+
+        public void OnParry(InputAction.CallbackContext context)
+        {
+            if (inputsDisabled)
+                return;
+
+            if (context.performed)
+            {
+                inputBufferer.BufferInput(InputEnum.Parry);
             }
         }
 

@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 minBounds = new Vector2(-8f, -4.5f);
     [SerializeField] private Vector2 maxBounds = new Vector2(8f, 4.5f);
 
+    [SerializeField] private Animator animator;
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private bool isMovementLocked;
@@ -42,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
             moveInput = Vector2.zero;
             return;
         }
+
+        animator.SetFloat("MoveSpeed", Mathf.Abs(moveInput.magnitude * moveSpeed));
 
         float horizontal = 0f;
         float vertical = 0f;

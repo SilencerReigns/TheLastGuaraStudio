@@ -21,29 +21,29 @@ namespace Player
 
         public void ToggleRunEffects(bool activate, AudioController audioController)
         {
-            if (activate)
-                runParticles.StartRunParticles(audioController);
+            //if (activate)
+            //    runParticles.StartRunParticles(audioController);
 
-            else
-                runParticles.StopRunParticles();
+            //else
+            //    runParticles.StopRunParticles();
         }
 
         public void PlayJumpEffects()
         {
-            jumpParticles.PlayJumpParticles();
+            //jumpParticles.PlayJumpParticles();
         }
 
         public void ToggleDashEffects(bool activate)
         {
             if (activate)
             {
-                dashParticles.StartDashParticles();
+                //dashParticles.StartDashParticles();
                 afterImagesManager.StartAfterImages(playerSr.transform, playerSr);
             }
 
             else
             {
-                dashParticles.StopDashParticles();
+                //dashParticles.StopDashParticles();
                 afterImagesManager.StopAfterImages(playerSr.transform);
             }
         }

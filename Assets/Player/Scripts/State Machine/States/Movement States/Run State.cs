@@ -1,4 +1,5 @@
 using StateMachine;
+using UnityEngine;
 
 namespace Player
 {
@@ -13,14 +14,8 @@ namespace Player
 
         public override void StateUpdate()
         {
-            if (core.moveDirection.x == 0)
+            if (core.moveDirection == Vector2.zero)
                 stateController.SetState<IdleState>(false);
-
-            else if (!core.isGrounded)
-                stateController.SetState<FallState>(false);
-
-            else if (core.ConsumeInput(InputEnum.Jump))
-                stateController.SetState<JumpState>(false);
 
             else if (core.CheckInput() != InputEnum.None)
                 stateController.SetState<TransitionsState>(false);
@@ -28,7 +23,7 @@ namespace Player
 
         public override void StateFixedUpdate()
         {
-            core.rb.linearVelocityX = core.moveDirection.x * core.movementData.moveSpeed;
+            core.rb.linearVelocity = core.moveDirection * core.movementData.moveSpeed;
         }
 
         public override void StateExit()

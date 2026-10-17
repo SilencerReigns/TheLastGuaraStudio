@@ -38,12 +38,12 @@ public class MeleeMove : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Procura o script HealthPlayer no objeto do jogador com o qual colidiu
-            HealthPlayer playerHealth = collision.gameObject.GetComponent<HealthPlayer>();
+            //HealthPlayer playerHealth = collision.gameObject.GetComponent<HealthPlayer>();
 
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damageAmount); // Aplica o dano ao jogador
-            }
+            //if (playerHealth != null)
+            //{
+            //    playerHealth.TakeDamage(damageAmount); // Aplica o dano ao jogador
+            //}
 
             GetRepelled();
         }

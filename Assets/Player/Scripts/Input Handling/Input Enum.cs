@@ -4,6 +4,10 @@ namespace Player
     {
         None,
         Jump,
-        Dash
+        Dash,
+        Light_Attack,
+        Heavy_Attack,
+        Parry,
+        Heal
     }
 }

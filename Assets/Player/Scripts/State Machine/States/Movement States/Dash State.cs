@@ -12,11 +12,9 @@ namespace Player
 
             core.effectsController.ToggleDashEffects(true);
             core.audioController.PlayDashSFX();
-
-            core.rb.gravityScale = 0;
             
-            core.rb.linearVelocityY = 0;
-            core.rb.linearVelocityX = core.facingDirection * core.movementData.dashSpeed;
+            core.rb.linearVelocity = Vector2.zero;
+            core.rb.linearVelocity = core.lastMoveDirection * core.movementData.dashSpeed;
 
             StartCoroutine(ExitRoutine());
         }
@@ -27,11 +25,7 @@ namespace Player
 
             core.effectsController.ToggleDashEffects(false);
 
-            if (!core.isGrounded)
-                stateController.SetState<FallState>(false);
-
-            else
-                stateController.SetState<IdleState>(false);
+            stateController.SetState<IdleState>(false);
         }
 
         public override void StateUpdate() { }
