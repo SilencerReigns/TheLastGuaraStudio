@@ -2,7 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using UnityEngine;
 
-public class MeleeRange : MonoBehaviour
+public class RangeMove : MonoBehaviour
 {
     [SerializeField] private Transform playerPosition;
 
@@ -12,14 +12,6 @@ public class MeleeRange : MonoBehaviour
 
     public bool isStunned = false;
     private bool isRepelled = false;
-
-    IEnumerator Start()
-    {
-        yield return new WaitForSeconds(3f);
-        GetStunned();
-        yield return new WaitForSeconds(5f);
-        GetRepelled();
-    }
 
     void Update()
     {
@@ -33,21 +25,41 @@ public class MeleeRange : MonoBehaviour
     {
         if (playerPosition == null) return;
 
-        // Ponto alvo mantém o X e Z do próprio objeto, mudando apenas o Y para o do jogador
+        // Mantém o X e Z do próprio objeto, alterando apenas o Y para o do jogador
         Vector3 targetY = new Vector3(transform.position.x, playerPosition.position.y, transform.position.z);
 
-        // Move suavemente até a posição alvo no eixo Y
+        // Move suavemente no eixo Y
         transform.position = Vector3.MoveTowards(transform.position, targetY, speed * Time.deltaTime);
     }
 
-    // Sistema de Repulsão (apenas no eixo Y)
+    // Detecta o contato físico com o Player em 2D
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            GetRepelled();
+        }
+    }
+
+    /* 
+    // Se o Collider estiver marcado como "Is Trigger", use este método:
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GetRepelled();
+        }
+    }
+    */
+
+    // Repell System (Repulsão apenas no eixo Y)
     public void GetRepelled()
     {
         if (playerPosition == null || isRepelled) return;
 
         isRepelled = true;
 
-        // Determina se deve ser repelido para cima ou para baixo com base no Y do jogador
+        // Empurra para cima se estiver acima/no mesmo Y do player, ou para baixo se estiver abaixo
         float directionY = transform.position.y >= playerPosition.position.y ? 1f : -1f;
 
         Vector3 endPoint = new Vector3(
@@ -56,13 +68,14 @@ public class MeleeRange : MonoBehaviour
             transform.position.z
         );
 
+        // O DOTween faz a animação e reativa o movimento normal ao terminar
         transform.DOMove(endPoint, 0.5f).OnComplete(() =>
         {
             isRepelled = false;
         });
     }
 
-    // Sistema de Stun
+    // Stun System
     public void GetStunned()
     {
         StartCoroutine(StunCoroutine());
