@@ -9,12 +9,10 @@ public class MeleeMove : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] public float stunTime = 2f;
     [SerializeField] private float repelDistance = 3f;
+    [SerializeField] private float damageAmount = 10f; // Quantidade de dano configurável no Inspector
 
     public bool isStunned = false;
     private bool isRepelled = false;
-
-    // Removido o Start com chamadas de teste por tempo.
-    // O GetRepelled agora é disparado unicamente no contato físico abaixo.
 
     void Update()
     {
@@ -39,16 +37,31 @@ public class MeleeMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            // Procura o script HealthPlayer no objeto do jogador com o qual colidiu
+            HealthPlayer playerHealth = collision.gameObject.GetComponent<HealthPlayer>();
+
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damageAmount); // Aplica o dano ao jogador
+            }
+
             GetRepelled();
         }
     }
 
     /* 
-    // Se estiver a usar o Collider com "Is Trigger" ativado, use este método em vez do de cima:
+    // Se estiver a usar o Collider com "Is Trigger" ativado no Inimigo ou no Player:
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            HealthPlayer playerHealth = other.GetComponent<HealthPlayer>();
+
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damageAmount);
+            }
+
             GetRepelled();
         }
     }
