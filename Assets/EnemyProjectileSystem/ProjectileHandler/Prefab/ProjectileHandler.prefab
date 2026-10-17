@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5995852346390945424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183460781208026785}
+  - component: {fileID: 4110607303112450495}
+  - component: {fileID: 7905849313827186865}
+  m_Layer: 0
+  m_Name: ProjectileHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &183460781208026785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5995852346390945424}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4110607303112450495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5995852346390945424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f832dab3379075348ac75896ae4313c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileManager
+  yLimit: 6
+  xLimit: 10
+--- !u!114 &7905849313827186865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5995852346390945424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 427534342ba181d429e78f0f80acea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectilePool
+  entries:
+  - prewarm: 1000
+    prefab: {fileID: 3933656841300143765, guid: eaa5dcd010aad0844bd7e9fb5e7f2dd3, type: 3}
+  - prewarm: 200
+    prefab: {fileID: 5226910522803627184, guid: d5a08ba21ba258c48b4bc2bbfcbb8e1f, type: 3}
+  - prewarm: 1
+    prefab: {fileID: 6510659514066844682, guid: 7542b9dc3ce75c34c9bc6734fc654810, type: 3}
+  - prewarm: 100
+    prefab: {fileID: -1220166414233836646, guid: ef04f1b71cf68db479017bc59e66a318, type: 3}
+  - prewarm: 100
+    prefab: {fileID: 7863393820265655808, guid: c2a40b9d24c0d1b42882073298d7c735, type: 3}
+  - prewarm: 100
+    prefab: {fileID: 8780472043828141026, guid: 71a0b1436e0234f4883ca641564afe19, type: 3}
+  targetTag: Player
