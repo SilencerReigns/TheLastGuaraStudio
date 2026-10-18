@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2110113663799031705}
   - component: {fileID: 8780472043828141026}
   - component: {fileID: 303360501020697046}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: ReflectiveBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

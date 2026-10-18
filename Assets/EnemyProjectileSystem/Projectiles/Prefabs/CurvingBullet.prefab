@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2360099656765320824}
   - component: {fileID: 5226910522803627184}
   - component: {fileID: 9117846383244048239}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: CurvingBullet
   m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
