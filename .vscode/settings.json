@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "DevU-TemplateProject.slnx",
+    "dotnet.defaultSolution": "TheLastGuaraStudio.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
