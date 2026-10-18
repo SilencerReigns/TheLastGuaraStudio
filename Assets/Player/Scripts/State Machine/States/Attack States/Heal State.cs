@@ -9,6 +9,7 @@ namespace Player
         public override void StateEnter()
         {
             core.rb.linearVelocity = Vector2.zero;
+            core.canheal = false;
 
             core.animationHandler.PlayAnimation("Heal");
 

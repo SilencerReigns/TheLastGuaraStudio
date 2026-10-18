@@ -8,6 +8,7 @@ namespace Player
     {
         public override void StateEnter()
         {
+            core.canParry = false;
             core.rb.linearVelocity = Vector2.zero;
 
             core.animationHandler.PlayAnimation("Parry");

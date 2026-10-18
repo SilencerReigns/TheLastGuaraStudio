@@ -1,64 +1,43 @@
 fileFormatVersion: 2
-guid: 4117a45909c7db94c829d5cfada41ea6
+guid: 259f8173d5900dd458a429d04f98ae5a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3137624617754024421
-    second: BK_light_attack_2_0
+      213: -186113032421810819
+    second: BK_weapon_run_0
   - first:
-      213: 1411510604107606543
-    second: BK_light_attack_2_1
+      213: -4092222286801886487
+    second: BK_weapon_run_1
   - first:
-      213: 857919014159104365
-    second: BK_light_attack_2_2
+      213: 3660645351554419814
+    second: BK_weapon_run_2
   - first:
-      213: 3914546188470725332
-    second: BK_light_attack_2_3
+      213: -4619893898030511550
+    second: BK_weapon_run_3
   - first:
-      213: -6340384911892125883
-    second: BK_light_attack_2_4
+      213: -2673892940203462496
+    second: BK_weapon_run_4
   - first:
-      213: -8187481564667641941
-    second: BK_light_attack_2_5
+      213: -3940145377713888871
+    second: BK_weapon_run_5
   - first:
-      213: 8990771314822957793
-    second: BK_light_attack_2_6
+      213: -2147370371175963424
+    second: BK_weapon_run_6
   - first:
-      213: -2355077125702715524
-    second: BK_light_attack_2_7
+      213: 4728982040883376138
+    second: BK_weapon_run_7
   - first:
-      213: 7476531493505276918
-    second: BK_light_attack_2_8
+      213: 7593653415188857027
+    second: BK_weapon_run_8
   - first:
-      213: 6078755275505178286
-    second: BK_light_attack_2_9
+      213: 8587120062822203900
+    second: BK_weapon_run_9
   - first:
-      213: -2665971170354286527
-    second: BK_light_attack_2_10
+      213: 7862981567258715242
+    second: BK_weapon_run_10
   - first:
-      213: -630581724772252563
-    second: BK_light_attack_2_11
-  - first:
-      213: 6136133277052427902
-    second: BK_light_attack_2_12
-  - first:
-      213: -5642720569238766703
-    second: BK_light_attack_2_13
-  - first:
-      213: -8370738720194281898
-    second: BK_light_attack_2_14
-  - first:
-      213: 4924761151519544474
-    second: BK_light_attack_2_15
-  - first:
-      213: 8113870316676940410
-    second: BK_light_attack_2_16
-  - first:
-      213: 7873494445248431103
-    second: BK_light_attack_2_17
-  - first:
-      213: 5797886325773682093
-    second: BK_light_attack_2_18
+      213: -5434316348345832211
+    second: BK_weapon_run_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -150,203 +129,282 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BK_light_attack_2_0
+      name: BK_weapon_run_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 38
         y: 128
-        width: 128
-        height: 64
+        width: 38
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e9dfbb47f41b8b20800000000000000
-      internalID: 3137624617754024421
+      spriteID: d7d5d6ede2bca6df0800000000000000
+      internalID: -186113032421810819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_2_1
+      name: BK_weapon_run_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 165
         y: 128
-        width: 128
-        height: 64
+        width: 42
+        height: 35
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0ae78a7a61b69310800000000000000
-      internalID: 1411510604107606543
+      spriteID: 9e2ac3df2818537c0800000000000000
+      internalID: -4092222286801886487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_2_2
+      name: BK_weapon_run_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
-        width: 128
-        height: 64
+        x: 289
+        y: 131
+        width: 45
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d69b1054cc0f7eb00800000000000000
-      internalID: 857919014159104365
+      spriteID: 66c06146d893dc230800000000000000
+      internalID: 3660645351554419814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_2_3
+      name: BK_weapon_run_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 417
+        y: 130
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a85eb1af6d2efb0800000000000000
+      internalID: -4619893898030511550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_weapon_run_4
+      rect:
+        serializedVersion: 2
+        x: 32
         y: 64
-        width: 128
-        height: 64
+        width: 45
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4da28aca403435630800000000000000
-      internalID: 3914546188470725332
+      spriteID: 0a07fbba98c64ead0800000000000000
+      internalID: -2673892940203462496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_2_4
+      name: BK_weapon_run_5
       rect:
         serializedVersion: 2
-        x: 128
+        x: 163
         y: 64
-        width: 128
-        height: 64
+        width: 37
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5476c63f38d6208a0800000000000000
-      internalID: -6340384911892125883
+      spriteID: 99167fd97aac159c0800000000000000
+      internalID: -3940145377713888871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_2_5
+      name: BK_weapon_run_6
       rect:
         serializedVersion: 2
-        x: 256
+        x: 293
         y: 64
-        width: 128
-        height: 64
+        width: 33
+        height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: baffce465e8306e80800000000000000
-      internalID: -8187481564667641941
+      spriteID: 0e4abd056020332e0800000000000000
+      internalID: -2147370371175963424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_2_6
+      name: BK_weapon_run_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 64
+        x: 421
+        y: 64
+        width: 38
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ea4bcc20e2a5cc70800000000000000
-      internalID: 8990771314822957793
+      spriteID: a003e086c18b0a140800000000000000
+      internalID: 4728982040883376138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_2_7
+      name: BK_weapon_run_8
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 64
+        x: 36
+        y: 2
+        width: 36
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7777d7f4d5115fd0800000000000000
-      internalID: -2355077125702715524
+      spriteID: 3c083c75c83126960800000000000000
+      internalID: 7593653415188857027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_2_8
+      name: BK_weapon_run_9
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 64
+        x: 167
+        y: 2
+        width: 34
+        height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fb176ee7c9f1c760800000000000000
-      internalID: 7476531493505276918
+      spriteID: cf1c52c53349b2770800000000000000
+      internalID: 8587120062822203900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_weapon_run_10
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 2
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6466e7531cee1d60800000000000000
+      internalID: 7862981567258715242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_weapon_run_11
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 0
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: decafbbc21e6594b0800000000000000
+      internalID: -5434316348345832211
       vertices: []
       indices: 
       edges: []
@@ -355,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6d698b9055bd7854594c56a9e03cbe19
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -363,21 +421,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceOnImport
-        value: False
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":3.0},"gridSpriteSize":{"x":128.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      BK_light_attack_2_0: 3137624617754024421
-      BK_light_attack_2_1: 1411510604107606543
-      BK_light_attack_2_2: 857919014159104365
-      BK_light_attack_2_3: 3914546188470725332
-      BK_light_attack_2_4: -6340384911892125883
-      BK_light_attack_2_5: -8187481564667641941
-      BK_light_attack_2_6: 8990771314822957793
-      BK_light_attack_2_7: -2355077125702715524
-      BK_light_attack_2_8: 7476531493505276918
+      BK_weapon_run_0: -186113032421810819
+      BK_weapon_run_1: -4092222286801886487
+      BK_weapon_run_10: 7862981567258715242
+      BK_weapon_run_11: -5434316348345832211
+      BK_weapon_run_2: 3660645351554419814
+      BK_weapon_run_3: -4619893898030511550
+      BK_weapon_run_4: -2673892940203462496
+      BK_weapon_run_5: -3940145377713888871
+      BK_weapon_run_6: -2147370371175963424
+      BK_weapon_run_7: 4728982040883376138
+      BK_weapon_run_8: 7593653415188857027
+      BK_weapon_run_9: 8587120062822203900
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

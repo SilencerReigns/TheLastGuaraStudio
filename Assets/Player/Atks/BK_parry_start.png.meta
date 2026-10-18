@@ -1,85 +1,25 @@
 fileFormatVersion: 2
-guid: c680c8e8b40d5ef4f9d027fa2190f0df
+guid: 57851a257fab27544be2a3c4c4cb47dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7571584667635629890
-    second: BK_death_0
+      213: -5280356758046860614
+    second: BK_parry_start_0
   - first:
-      213: 5050654559512903447
-    second: BK_death_1
+      213: 1635456999564314931
+    second: BK_parry_start_1
   - first:
-      213: -3637314081579682564
-    second: BK_death_2
+      213: 347225891454106901
+    second: BK_parry_start_2
   - first:
-      213: 32570880821174445
-    second: BK_death_3
+      213: 1926665577405001894
+    second: BK_parry_start_3
   - first:
-      213: 2867410912956646051
-    second: BK_death_4
+      213: 5931699226522606493
+    second: BK_parry_start_4
   - first:
-      213: -6934615146595183609
-    second: BK_death_5
-  - first:
-      213: -428368353458201187
-    second: BK_death_6
-  - first:
-      213: 6314926089381613462
-    second: BK_death_7
-  - first:
-      213: 2907688313413644433
-    second: BK_death_8
-  - first:
-      213: -3245115670482878662
-    second: BK_death_9
-  - first:
-      213: -2177572315684927888
-    second: BK_death_10
-  - first:
-      213: 7001488028389906641
-    second: BK_death_11
-  - first:
-      213: -3604511473848743159
-    second: BK_death_12
-  - first:
-      213: -7520507361721409287
-    second: BK_death_13
-  - first:
-      213: 5425235214559451866
-    second: BK_death_14
-  - first:
-      213: -2362924333286661785
-    second: BK_death_15
-  - first:
-      213: 224599270196725177
-    second: BK_death_16
-  - first:
-      213: -7091273910663162524
-    second: BK_death_17
-  - first:
-      213: 6089827636579172813
-    second: BK_death_18
-  - first:
-      213: 4843742732790569198
-    second: BK_death_19
-  - first:
-      213: -8050977122373512544
-    second: BK_death_20
-  - first:
-      213: -1258522513037914240
-    second: BK_death_21
-  - first:
-      213: -1116131218158012136
-    second: BK_death_22
-  - first:
-      213: -5649943959302999970
-    second: BK_death_23
-  - first:
-      213: -7644052132846825765
-    second: BK_death_24
-  - first:
-      213: -8668582936547968178
-    second: BK_death_25
+      213: 221568510488707316
+    second: BK_parry_start_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -171,137 +111,150 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BK_death_0
+      name: BK_parry_start_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 117
-        width: 128
-        height: 75
+        x: 41
+        y: 64
+        width: 32
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 24f3735a32ca31960800000000000000
-      internalID: 7571584667635629890
+      spriteID: aba984d418768b6b0800000000000000
+      internalID: -5280356758046860614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_death_1
+      name: BK_parry_start_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 117
-        width: 128
-        height: 75
+        x: 172
+        y: 64
+        width: 30
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71f39f6ff87871640800000000000000
-      internalID: 5050654559512903447
+      spriteID: 3390570e97f42b610800000000000000
+      internalID: 1635456999564314931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_death_3
+      name: BK_parry_start_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 117
+        x: 298
+        y: 64
+        width: 36
+        height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da02e552b07b37000800000000000000
-      internalID: 32570880821174445
+      spriteID: 51db0fccb1891d400800000000000000
+      internalID: 347225891454106901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_death_2
+      name: BK_parry_start_3
       rect:
         serializedVersion: 2
-        x: 256
-        y: 117
-        width: 128
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac5fd888aebe4e142b94951e33c421e6
-      internalID: -3637314081579682564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BK_death_4
-      rect:
-        serializedVersion: 2
-        x: 128
+        x: 44
         y: 0
-        width: 128
-        height: 117
+        width: 33
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b5612a21488792e4aa766344f4f55842
-      internalID: 2867410912956646051
+      spriteID: 6a0b23e7224ecba10800000000000000
+      internalID: 1926665577405001894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_death_5
+      name: BK_parry_start_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 171
         y: 0
-        width: 128
-        height: 117
+        width: 33
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 89703b94e359a04429018e86131b23e3
-      internalID: -6934615146595183609
+      spriteID: d9bd65fd401a15250800000000000000
+      internalID: 5931699226522606493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_parry_start_5
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f08719e26b231300800000000000000
+      internalID: 221568510488707316
       vertices: []
       indices: 
       edges: []
@@ -310,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a7e27f520af8bc346b94a2bdc2144595
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -318,16 +271,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":2.0},"gridSpriteSize":{"x":128.0,"y":75.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      BK_death_0: 7571584667635629890
-      BK_death_1: 5050654559512903447
-      BK_death_2: -3637314081579682564
-      BK_death_3: 32570880821174445
-      BK_death_4: 2867410912956646051
-      BK_death_5: -6934615146595183609
+      BK_parry_start_0: -5280356758046860614
+      BK_parry_start_1: 1635456999564314931
+      BK_parry_start_2: 347225891454106901
+      BK_parry_start_3: 1926665577405001894
+      BK_parry_start_4: 5931699226522606493
+      BK_parry_start_5: 221568510488707316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

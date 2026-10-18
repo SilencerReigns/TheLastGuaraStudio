@@ -1,70 +1,46 @@
 fileFormatVersion: 2
-guid: fd8809361d2441a499cba7fda7408705
+guid: fdf039e0d883a574eb8373929f20ef87
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8071538572789601786
-    second: BK_light_attack_1_0
+      213: -4834498061012418083
+    second: BK_light_attack_4_0
   - first:
-      213: 3211030736541717406
-    second: BK_light_attack_1_1
+      213: 8791517557772059756
+    second: BK_light_attack_4_1
   - first:
-      213: -1965929644758548476
-    second: BK_light_attack_1_2
+      213: 693459339125588057
+    second: BK_light_attack_4_2
   - first:
-      213: -5658552718029843296
-    second: BK_light_attack_1_3
+      213: -8195218174528428611
+    second: BK_light_attack_4_3
   - first:
-      213: 6652118322069801230
-    second: BK_light_attack_1_4
+      213: -4441509344516870495
+    second: BK_light_attack_4_4
   - first:
-      213: -8559152164050053078
-    second: BK_light_attack_1_5
+      213: 6257759528312163737
+    second: BK_light_attack_4_5
   - first:
-      213: 3278138025066686517
-    second: BK_light_attack_1_6
+      213: 3028317683272093792
+    second: BK_light_attack_4_6
   - first:
-      213: 4236690210262820339
-    second: BK_light_attack_1_7
+      213: 8684884819150191791
+    second: BK_light_attack_4_7
   - first:
-      213: -4096466623175869305
-    second: BK_light_attack_1_8
+      213: 41741428789269864
+    second: BK_light_attack_4_8
   - first:
-      213: -338476886702513027
-    second: BK_light_attack_1_9
+      213: 7323174439049554385
+    second: BK_light_attack_4_9
   - first:
-      213: 7050045082152769185
-    second: BK_light_attack_1_10
+      213: -2876303111714146019
+    second: BK_light_attack_4_10
   - first:
-      213: -8854939884732626470
-    second: BK_light_attack_1_11
+      213: -2269088349861918354
+    second: BK_light_attack_4_11
   - first:
-      213: -6130043042198451202
-    second: BK_light_attack_1_12
-  - first:
-      213: 4643842566979140857
-    second: BK_light_attack_1_13
-  - first:
-      213: -8732273228949809265
-    second: BK_light_attack_1_14
-  - first:
-      213: 9114293437485128467
-    second: BK_light_attack_1_15
-  - first:
-      213: 6238464648159087642
-    second: BK_light_attack_1_16
-  - first:
-      213: -5735083297468213370
-    second: BK_light_attack_1_17
-  - first:
-      213: 8981785167105614301
-    second: BK_light_attack_1_18
-  - first:
-      213: 4732216717908037533
-    second: BK_light_attack_1_19
-  - first:
-      213: 4976229862236114852
-    second: BK_light_attack_1_20
+      213: 8828919681183950449
+    second: BK_light_attack_4_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -156,11 +132,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BK_light_attack_1_0
+      name: BK_light_attack_4_0
       rect:
         serializedVersion: 2
         x: 0
@@ -175,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af5dcfd219dd30070800000000000000
-      internalID: 8071538572789601786
+      spriteID: dd14a06b0a968ecb0800000000000000
+      internalID: -4834498061012418083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_1_1
+      name: BK_light_attack_4_1
       rect:
         serializedVersion: 2
         x: 128
@@ -197,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e931e6e217fdf8c20800000000000000
-      internalID: 3211030736541717406
+      spriteID: c640d9ba3aeb10a70800000000000000
+      internalID: 8791517557772059756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_1_2
+      name: BK_light_attack_4_2
       rect:
         serializedVersion: 2
         x: 256
@@ -219,14 +208,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 400c1ce676d97b4e0800000000000000
-      internalID: -1965929644758548476
+      spriteID: 95002c64899af9900800000000000000
+      internalID: 693459339125588057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_1_3
+      name: BK_light_attack_4_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5686a8d7cb44e80800000000000000
+      internalID: -8195218174528428611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_4_4
       rect:
         serializedVersion: 2
         x: 0
@@ -241,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a492038848c871b0800000000000000
-      internalID: -5658552718029843296
+      spriteID: 1ae6e7588c69c52c0800000000000000
+      internalID: -4441509344516870495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_1_4
+      name: BK_light_attack_4_5
       rect:
         serializedVersion: 2
         x: 128
@@ -263,14 +274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0986d69e52115c50800000000000000
-      internalID: 6652118322069801230
+      spriteID: 99dccdec22708d650800000000000000
+      internalID: 6257759528312163737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_1_5
+      name: BK_light_attack_4_6
       rect:
         serializedVersion: 2
         x: 256
@@ -285,14 +296,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a28d7438478c73980800000000000000
-      internalID: -8559152164050053078
+      spriteID: 060977263eeb60a20800000000000000
+      internalID: 3028317683272093792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_1_6
+      name: BK_light_attack_4_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac31a08ab8e68870800000000000000
+      internalID: 8684884819150191791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BK_light_attack_4_8
       rect:
         serializedVersion: 2
         x: 0
@@ -307,14 +340,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 538eccc5a294e7d20800000000000000
-      internalID: 3278138025066686517
+      spriteID: 865d66bbb9b449000800000000000000
+      internalID: 41741428789269864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_1_7
+      name: BK_light_attack_4_9
       rect:
         serializedVersion: 2
         x: 128
@@ -329,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f5271e9c4fbbca30800000000000000
-      internalID: 4236690210262820339
+      spriteID: 1d9e4cb3a5421a560800000000000000
+      internalID: 7323174439049554385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BK_light_attack_1_8
+      name: BK_light_attack_4_10
       rect:
         serializedVersion: 2
         x: 256
@@ -351,8 +384,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78cbb5b6f4d6627c0800000000000000
-      internalID: -4096466623175869305
+      spriteID: d197de72f815518d0800000000000000
+      internalID: -2876303111714146019
       vertices: []
       indices: 
       edges: []
@@ -361,7 +394,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 99d7dc6c1ec0fa949933ffefbb28e0cd
+    spriteID: f4d1c457d4571f3469f4b6be7a4ddaa1
     internalID: 0
     vertices: []
     indices: 
@@ -371,17 +404,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":3.0},"gridSpriteSize":{"x":128.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":3.0},"gridSpriteSize":{"x":128.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      BK_light_attack_1_0: 8071538572789601786
-      BK_light_attack_1_1: 3211030736541717406
-      BK_light_attack_1_2: -1965929644758548476
-      BK_light_attack_1_3: -5658552718029843296
-      BK_light_attack_1_4: 6652118322069801230
-      BK_light_attack_1_5: -8559152164050053078
-      BK_light_attack_1_6: 3278138025066686517
-      BK_light_attack_1_7: 4236690210262820339
-      BK_light_attack_1_8: -4096466623175869305
+      BK_light_attack_4_0: -4834498061012418083
+      BK_light_attack_4_1: 8791517557772059756
+      BK_light_attack_4_10: -2876303111714146019
+      BK_light_attack_4_2: 693459339125588057
+      BK_light_attack_4_3: -8195218174528428611
+      BK_light_attack_4_4: -4441509344516870495
+      BK_light_attack_4_5: 6257759528312163737
+      BK_light_attack_4_6: 3028317683272093792
+      BK_light_attack_4_7: 8684884819150191791
+      BK_light_attack_4_8: 41741428789269864
+      BK_light_attack_4_9: 7323174439049554385
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
