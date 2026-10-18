@@ -37,11 +37,20 @@ namespace Player
             else if (core.ConsumeInput(InputEnum.Heavy_Attack))
                 stateController.SetState<HeavyState>(false);
 
-            else if(core.ConsumeInput(InputEnum.Heal))
-                stateController.SetState<HealState>(false);
-
+            else if (core.ConsumeInput(InputEnum.Heal))
+            {
+                if (core.canheal)
+                    stateController.SetState<HealState>(false);
+                else
+                    stateController.SetState<IdleState>(false);
+            }
             else if (core.ConsumeInput(InputEnum.Parry))
-                stateController.SetState<ParryState>(false);
+            {
+                if (core.canParry)
+                    stateController.SetState<ParryState>(false);
+                else
+                    stateController.SetState<IdleState>(false);
+            }
         }
 
         public override void StateExit() { core.consumedInput = InputEnum.None; }

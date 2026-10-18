@@ -1,13 +1,16 @@
 using UnityEngine;
 using System.Collections;
 using HeyHeyThere.PixelBarsFree;
+using Player;
+using System.Diagnostics;
 
 public class PlayerParry : MonoBehaviour
 {
-    [Header("Parry")]
+    [SerializeField] private StateController stateController;
+    private Core core => (Core) stateController.GetCore();
     [SerializeField] private KeyCode parryKey = KeyCode.E;
     [SerializeField] private float parryDuration = 0.6f;
-    [SerializeField] private float parryCooldown = 2f;
+    [SerializeField] private float parryCooldown = 2.0f;
 
     [Header("UI")]
     [SerializeField] private PixelStatBar parryRing; 
@@ -33,6 +36,8 @@ public class PlayerParry : MonoBehaviour
             parryRing.value = parryRing.maxValue;
             parryRing.Settle();
         }
+
+        core.canParry = true;
     }
 
     private void Update()
@@ -90,4 +95,5 @@ public class PlayerParry : MonoBehaviour
         }
 
         isOnCooldown = false;
-}   }
+        core.canParry = true;
+    }   }

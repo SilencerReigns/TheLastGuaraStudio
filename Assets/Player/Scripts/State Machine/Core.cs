@@ -83,5 +83,9 @@ namespace Player
         public InputEnum consumedInput;
         public bool jumpHeld;
         public bool canPause;
+
+        public bool canParry;
+
+        public bool canheal;
     }
 }

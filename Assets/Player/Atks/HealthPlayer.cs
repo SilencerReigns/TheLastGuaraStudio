@@ -1,24 +1,28 @@
+using HeyHeyThere.PixelBarsFree;
+using Player;
 using System.Collections;
 using UnityEngine;
-using HeyHeyThere.PixelBarsFree;
 
 public class HealthPlayer : MonoBehaviour
 {
     [Header("Health")]
-    [SerializeField] private PixelStatBar healthBar;   // o orb de vida (Shape = Orb, Fill = health)
+    [SerializeField] private PixelStatBar healthBar;  
 
     public float MaxHealth = 100f;
     public float health;
 
-   // [SerializeField] private DeathCutscene deathScript;
+    // [SerializeField] private DeathCutscene deathScript;
+
+    [SerializeField] private StateController stateController;
+    private Core core => (Core)stateController.GetCore();
 
     [Header("Potion")]
     [SerializeField] private KeyCode potionKey = KeyCode.Q;
     [SerializeField] private float potionHealAmount = 30f;
-    [SerializeField] private float potionDrinkDuration = 1f;   // tempo parado enquanto bebe
-    [SerializeField] private float potionCooldown = 10f;       // começa depois que termina de beber
+    [SerializeField] private float potionDrinkDuration = 1f;  
+    [SerializeField] private float potionCooldown = 10f;   
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private PixelStatBar potionRing;          // anel de recarga (Shape = Ring)
+    [SerializeField] private PixelStatBar potionRing;       
 
     private bool isHealing;
     private bool isPotionOnCooldown;
@@ -36,6 +40,7 @@ public class HealthPlayer : MonoBehaviour
 
     private void Start()
     {
+        core.canheal = true;
         health = MaxHealth;
 
         healthBar.maxValue = MaxHealth;
@@ -53,7 +58,7 @@ public class HealthPlayer : MonoBehaviour
 
     private void Update()
     {
-        // o PixelStatBar já faz o flash e o rastro (trail) quando a vida cai
+     
         healthBar.value = health;
 
         if (Input.GetKeyDown(potionKey) &&
@@ -84,7 +89,7 @@ public class HealthPlayer : MonoBehaviour
         isHealing = true;
         isPotionOnCooldown = true;
 
-        // anel esvazia na hora em que usa (Settle pula a animação de queda)
+   
         if (potionRing != null)
         {
             potionRing.value = 0f;
@@ -97,8 +102,7 @@ public class HealthPlayer : MonoBehaviour
         }
 
         yield return new WaitForSeconds(potionDrinkDuration);
-
-        // se morreu durante o gole, não cura
+    
         if (health > 0f)
         {
             Heal(potionHealAmount);
@@ -111,7 +115,6 @@ public class HealthPlayer : MonoBehaviour
             playerMovement.SetMovementLocked(false);
         }
 
-        // recarga: o anel enche ao longo do cooldown
         float elapsed = 0f;
 
         while (elapsed < potionCooldown)
@@ -132,4 +135,5 @@ public class HealthPlayer : MonoBehaviour
         }
 
         isPotionOnCooldown = false;
+        core.canheal = true;
 }   }
