@@ -628,21 +628,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 441216059192132353, guid: 369af837c88446f428181b90a5b2f482, type: 3}
-      propertyPath: player
-      value: 
+    - target: {fileID: 3976953739179118993, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.5999999
       objectReference: {fileID: 0}
-    - target: {fileID: 3681041138637629011, guid: 369af837c88446f428181b90a5b2f482, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3873507296912218377, guid: 369af837c88446f428181b90a5b2f482, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3873507296912218377, guid: 369af837c88446f428181b90a5b2f482, type: 3}
-      propertyPath: attacks.Array.data[0].attackType
-      value: 10
+    - target: {fileID: 3976953739179118993, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.280692
       objectReference: {fileID: 0}
     - target: {fileID: 6548422014631127862, guid: 369af837c88446f428181b90a5b2f482, type: 3}
       propertyPath: fillBar
@@ -652,6 +644,10 @@ PrefabInstance:
       propertyPath: chunkBar
       value: 
       objectReference: {fileID: 1907733391}
+    - target: {fileID: 6548422014631127862, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: bossTexture
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6548422014631127862, guid: 369af837c88446f428181b90a5b2f482, type: 3}
       propertyPath: backgroundBar
       value: 
@@ -664,6 +660,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 8233197374768531460, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -985388388866273373, guid: 5ea4ccd9c475f4941a5626b1d15dcf3b, type: 3}
+    - target: {fileID: 8233197374768531460, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233197374768531460, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8551473630a57a44195cec9ba03705ba, type: 2}
     - target: {fileID: 8765616377375886147, guid: 369af837c88446f428181b90a5b2f482, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

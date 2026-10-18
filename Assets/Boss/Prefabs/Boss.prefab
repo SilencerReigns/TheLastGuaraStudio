@@ -68,7 +68,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 9bec8ee09920279a4af22fbb060c88bf, type: 3}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -753973533874590437, guid: 8ed783fc6e7ef31e1801c64183fae63f, type: 3}
+  m_Sprite: {fileID: -985388388866273373, guid: 5ea4ccd9c475f4941a5626b1d15dcf3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -236,7 +236,7 @@ MonoBehaviour:
   chunkBar: {fileID: 0}
   fillBar: {fileID: 0}
   effectsScript: {fileID: 0}
-  bossTexture: {fileID: 2800000, guid: 8ed783fc6e7ef31e1801c64183fae63f, type: 3}
+  bossTexture: {fileID: 0}
   c1: {fileID: 3873507296912218377}
   c2: {fileID: 441216059192132353}
   c3: {fileID: 3681041138637629011}
@@ -260,16 +260,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772d756002813adfca9125857e37a408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossTriggers
-  bossSpriteRenderer: {fileID: 8233197374768531460}
-  bossAnimator: {fileID: 3243521789462318391}
-  bossMaterial: {fileID: -876546973899608171, guid: 9bec8ee09920279a4af22fbb060c88bf, type: 3}
-  fase2: {fileID: 2800000, guid: 08b55bff7439ba1eba971359ad310a31, type: 3}
-  fase3: {fileID: 2800000, guid: 8e826789342bbb3fd852884bca83026e, type: 3}
   fase1Pattern: {fileID: 3873507296912218377}
   fase2Pattern: {fileID: 441216059192132353}
   fase3Pattern: {fileID: 3681041138637629011}
   audioController: {fileID: 0}
-  clip: {fileID: 8300000, guid: 60aeabec16a51d9c89bd4b731b88a741, type: 3}
   teleportInterval: 10
   spawnInterval: 20
 --- !u!114 &7946400058165122392
@@ -339,7 +333,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.5999999, y: 1.280692}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
