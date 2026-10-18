@@ -68,7 +68,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 8551473630a57a44195cec9ba03705ba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackController
   attacks:
   - attackType: 9
-    overrideProjectileAttributes: 1
+    overrideProjectileAttributes: 0
     burstSize: 100
     waitUntilPreviousAttackEnds: 1
     startDelay: 1
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackController
   attacks:
   - attackType: 9
-    overrideProjectileAttributes: 1
+    overrideProjectileAttributes: 0
     burstSize: 100
     waitUntilPreviousAttackEnds: 1
     startDelay: 1
@@ -264,8 +264,8 @@ MonoBehaviour:
   fase2Pattern: {fileID: 441216059192132353}
   fase3Pattern: {fileID: 3681041138637629011}
   audioController: {fileID: 0}
-  teleportInterval: 10
-  spawnInterval: 20
+  teleportInterval: 5
+  spawnInterval: 6
 --- !u!114 &7946400058165122392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawningControl
   monsterCount: 15
-  distance: 20
+  distance: 5
   prefab1: {fileID: 0}
   prefab2: {fileID: 0}
 --- !u!61 &3976953739179118993
@@ -329,7 +329,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -339,7 +339,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.4, y: 0.5}
   m_EdgeRadius: 0
 --- !u!95 &3243521789462318391
 Animator:
@@ -351,7 +351,7 @@ Animator:
   m_GameObject: {fileID: 6687990095499800118}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 408985e07b4b06f03a4af951166290e0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 244232cdc01001e4e9883c78b70353dc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

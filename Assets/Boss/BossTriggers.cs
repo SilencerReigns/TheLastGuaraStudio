@@ -54,17 +54,17 @@ public class BossTriggers : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(teleportInterval);
             var aux = teleportControl.TeleportRandomLocation(locationIndex);
             locationIndex = aux;
+            yield return new WaitForSeconds(teleportInterval);
         }
     }
     private IEnumerator UseSpawn()
     {
         while (true)
         {
-            yield return new WaitForSeconds(spawnInterval);
             spawningControl.SpawnMonsters();
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
 

@@ -60,16 +60,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectilePool
   entries:
-  - prewarm: 1000
+  - prewarm: 50
     prefab: {fileID: 3933656841300143765, guid: eaa5dcd010aad0844bd7e9fb5e7f2dd3, type: 3}
-  - prewarm: 200
+  - prewarm: 1
     prefab: {fileID: 5226910522803627184, guid: d5a08ba21ba258c48b4bc2bbfcbb8e1f, type: 3}
   - prewarm: 1
     prefab: {fileID: 6510659514066844682, guid: 7542b9dc3ce75c34c9bc6734fc654810, type: 3}
-  - prewarm: 100
+  - prewarm: 50
     prefab: {fileID: -1220166414233836646, guid: ef04f1b71cf68db479017bc59e66a318, type: 3}
-  - prewarm: 100
-    prefab: {fileID: 7863393820265655808, guid: c2a40b9d24c0d1b42882073298d7c735, type: 3}
-  - prewarm: 100
-    prefab: {fileID: 8780472043828141026, guid: 71a0b1436e0234f4883ca641564afe19, type: 3}
   targetTag: Player

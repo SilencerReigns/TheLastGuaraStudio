@@ -38,13 +38,15 @@ public class EnemyAttackController : MonoBehaviour
     private float screenY = 5;
     private float screenX = 11;
     private int activeAttacks = 0;
+    private int isAttacking = 0;
     [SerializeField]private int numberOfColums = 5;
     private string targetTag = "Player";
     [SerializeField]private Transform player;
     private Coroutine mainCoroutine;
     private List<Coroutine> minorCoroutines = new List<Coroutine>();
+    [SerializeField]private Animator animator;
 
-    public void Awake()
+    void Awake()
     {
         // Gets Player
         player = GameObject.FindGameObjectWithTag(targetTag).GetComponent<Transform>();
@@ -52,12 +54,28 @@ public class EnemyAttackController : MonoBehaviour
         {
             Debug.Log("Colocar Tag Player no objeto player!!!");
         }
+        // Pega o Animator
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
-    public void Start()
+    void Start()
     {
         if(player == null)
         {
             Debug.Log("Adicionar referencia ao transform do player no inspetor!!!");
+        }
+    }
+    void Update()
+    {
+        if(isAttacking != 0)
+        {
+            animator.SetBool("isAttacking",true);
+        }
+        else
+        {
+            animator.SetBool("isAttacking",false);
         }
     }
 
@@ -141,6 +159,8 @@ public class EnemyAttackController : MonoBehaviour
             yield return null;
         }
 
+        isAttacking++;
+
         var loops = (int)(attack.duration/attack.timeBetweenRepetitions);
         if(loops<=0){loops=1;}
 
@@ -163,8 +183,10 @@ public class EnemyAttackController : MonoBehaviour
             }
         }
 
+        animator.SetBool("isAttacking",false);
         // yield return new WaitForSeconds(attack.endDelay);
 
+        isAttacking--;
         activeAttacks--;
 
         yield return null;
