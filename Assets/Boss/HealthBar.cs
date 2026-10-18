@@ -1,16 +1,14 @@
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
 using Unity.Cinemachine;
+using HeyHeyThere.PixelBarsFree;
 
 public class HealthBar : MonoBehaviour
 {
     [Header("Objetos")]
     [SerializeField] private BossTriggers triggerScript;
-    [SerializeField] RectTransform backgroundBar;
-    [SerializeField] RectTransform chunkBar;
-    [SerializeField] RectTransform fillBar;
+    [SerializeField] PixelStatBar bossBar;  
     [SerializeField] ScreenEffectsMain effectsScript;
     [SerializeField] Texture2D bossTexture;
 
@@ -19,10 +17,8 @@ public class HealthBar : MonoBehaviour
     [SerializeField] EnemyAttackController c3;
     
     [Header("Configs")]
-    [SerializeField] float maxLenght = 1750;
     [SerializeField] float maxHealth = 1000;
-    [SerializeField] float DecayDuration = 0.5f;
-    [SerializeField] float ChunkDelay = 0.25f;
+    [SerializeField] float DecayDuration = 0.5f;   
     [SerializeField] float hitFlashDuration = 0.1f;
 
     [SerializeField] float[] Triggers;
@@ -31,13 +27,6 @@ public class HealthBar : MonoBehaviour
     private float health;
     private bool imune;
 
-    private Image fillImage;
-    private Image backgroundImage;
-
-    private Color originalFillColor;
-    private Color originalBgColor;
-
-    private Coroutine damageCoroutine;
     private Material bossMaterial;
 
     void Awake()
@@ -49,44 +38,17 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-        fillImage = fillBar.GetComponent<Image>();
-        backgroundImage = backgroundBar.GetComponent<Image>();
-    
-        originalFillColor = fillImage.color;
-        originalBgColor = backgroundImage.color;
-    }
 
-    private IEnumerator lerpDamage(float currentHealth)
-    {
-        float percent = currentHealth / maxHealth;
-        float lenghtPercent = percent * maxLenght;
-
-        fillBar.DOKill();
-        chunkBar.DOKill();
-        fillImage.DOKill();
-
-        fillBar.DOSizeDelta(new Vector2(lenghtPercent, fillBar.sizeDelta.y), 0.15f).SetEase(Ease.OutCubic);
-        
-        fillImage.DOColor(Color.white, 0.05f);
-
-        yield return new WaitForSeconds(0.05f);
-
-        fillImage.DOColor(originalFillColor, DecayDuration);
-
-        yield return new WaitForSeconds(ChunkDelay);
-
-        chunkBar.DOSizeDelta(new Vector2(lenghtPercent, chunkBar.sizeDelta.y), DecayDuration).SetEase(Ease.OutQuint);
+        bossBar.maxValue = maxHealth;
+        bossBar.value = health;
+        bossBar.Settle();
     }
 
     private void destroyHealth()
     {
-        fillBar.DOKill();
-        chunkBar.DOKill();
-        backgroundBar.DOKill();
+        bossBar.transform.DOKill();
 
-        fillBar.DOSizeDelta(new Vector2(0f, fillBar.sizeDelta.y), DecayDuration).SetEase(Ease.InOutElastic);
-        chunkBar.DOSizeDelta(new Vector2(0f, chunkBar.sizeDelta.y), DecayDuration).SetEase(Ease.InOutElastic);
-        backgroundBar.DOSizeDelta(new Vector2(0f, backgroundBar.sizeDelta.y), DecayDuration).SetEase(Ease.InOutElastic);
+        bossBar.transform.DOScaleX(0f, DecayDuration).SetEase(Ease.InOutElastic);
     }
 
     private IEnumerator FlashRoutine() {
@@ -102,9 +64,10 @@ public class HealthBar : MonoBehaviour
         if (imune) return false;
 
         health -= damage;
-        
-        if (damageCoroutine != null) StopCoroutine(damageCoroutine);
-        damageCoroutine = StartCoroutine(lerpDamage(health));
+
+    
+        bossBar.value = Mathf.Max(health, 0f);
+
         StartCoroutine(FlashRoutine());
         
         if (tIndex < Triggers.Length && health <= maxHealth * (Triggers[tIndex]) / 100)
@@ -120,7 +83,6 @@ public class HealthBar : MonoBehaviour
         {
             imune = true;
 
-            //Time.timeScale = 0f;
             c1.enabled = false;
             c2.enabled = false;
             c3.enabled = false;
@@ -148,5 +110,12 @@ public class HealthBar : MonoBehaviour
         yield return new WaitForSecondsRealtime(3f);
         sprite.DOFade(0f, 1f).SetUpdate(true);
         Destroy(this.gameObject);
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("PlayerAttack"))
+        {
+            Debug.Log("BOSS ATACADO!");
+        }
     }
 }
