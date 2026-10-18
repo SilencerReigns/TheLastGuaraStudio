@@ -21,8 +21,10 @@ public class HealthPlayer : MonoBehaviour
     [SerializeField] private float potionCooldown = 10f;
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private PixelStatBar potionRing;
-
     [SerializeField] private KeyCode debugKillKey = KeyCode.R;
+
+
+
 
     private bool isHealing;
     private bool isPotionOnCooldown;
@@ -31,6 +33,9 @@ public class HealthPlayer : MonoBehaviour
     public bool IsHealing => isHealing;
     public bool IsPotionOnCooldown => isPotionOnCooldown;
     public bool IsDead => isDead;
+
+
+    public static event System.Action OnPlayerDied;
 
     private void Awake()
     {
@@ -121,6 +126,7 @@ public class HealthPlayer : MonoBehaviour
             core.deathDirection = new Vector3(core.facingDirection == 0 ? 1 : core.facingDirection, 0f, 0f);
         }
         stateController.SetState<DeathState>(false);
+        OnPlayerDied?.Invoke();
     }
 
     private IEnumerator DrinkPotion()

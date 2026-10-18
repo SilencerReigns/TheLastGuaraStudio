@@ -20,12 +20,14 @@ public class DeathCutscene : MonoBehaviour
     // Este script precisa ficar num objeto que já começa ATIVO na cena.
     private void OnEnable()
     {
-        Player.DeathState.OnPlayerDeath += DeathScene;
+        //Player.DeathState.OnPlayerDeath += DeathScene;
+        HealthPlayer.OnPlayerDied += DeathScene;
     }
 
     private void OnDisable()
     {
-        Player.DeathState.OnPlayerDeath -= DeathScene;
+        //Player.DeathState.OnPlayerDeath -= DeathScene;
+        HealthPlayer.OnPlayerDied -= DeathScene;
     }
 
     public void DeathScene()
@@ -41,7 +43,7 @@ public class DeathCutscene : MonoBehaviour
         // a animação "Death" já é tocada pelo DeathState; aqui só esperamos ela terminar
         yield return new WaitForSecondsRealtime(delayBeforeYouDied);
 
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
 
         // ao ativar, o Animator do YouDied (Unscaled Time) toca o estado padrão sozinho
         if (youDied != null)
@@ -57,7 +59,7 @@ public class DeathCutscene : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(youDiedDuration);
 
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
 
         if (loadMenuAtEnd)
         {
