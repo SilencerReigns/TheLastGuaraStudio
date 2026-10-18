@@ -537,6 +537,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 67052168973978189, guid: b070354f97da11a469151dd12b43d075, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5917087603773434250, guid: b070354f97da11a469151dd12b43d075, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.197789
@@ -845,6 +849,26 @@ PrefabInstance:
       propertyPath: attacks.Array.data[1].timeBetweenRepetitions
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 837440924225562059, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: spawnInterval
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 837440924225562059, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: teleportInterval
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681041138637629011, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: attacks.Array.data[0].startDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681041138637629011, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: attacks.Array.data[1].startDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681041138637629011, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: attacks.Array.data[1].timeBetweenRepetitions
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3873507296912218377, guid: 369af837c88446f428181b90a5b2f482, type: 3}
       propertyPath: attacks.Array.data[0].startDelay
       value: 3
@@ -854,21 +878,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1473089155}
     - target: {fileID: 6548422014631127862, guid: 369af837c88446f428181b90a5b2f482, type: 3}
-      propertyPath: fillBar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548422014631127862, guid: 369af837c88446f428181b90a5b2f482, type: 3}
-      propertyPath: chunkBar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548422014631127862, guid: 369af837c88446f428181b90a5b2f482, type: 3}
-      propertyPath: backgroundBar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548422014631127862, guid: 369af837c88446f428181b90a5b2f482, type: 3}
       propertyPath: effectsScript
       value: 
       objectReference: {fileID: 1393376859}
+    - target: {fileID: 6548422014631127862, guid: 369af837c88446f428181b90a5b2f482, type: 3}
+      propertyPath: PlayersLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 6687990095499800118, guid: 369af837c88446f428181b90a5b2f482, type: 3}
       propertyPath: m_Name
       value: Boss

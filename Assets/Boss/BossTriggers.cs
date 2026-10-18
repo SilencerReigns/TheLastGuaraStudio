@@ -18,13 +18,18 @@ public class BossTriggers : MonoBehaviour
     [SerializeField]private float spawnInterval = 20f;
     private SpawningControl spawningControl;
     private Coroutine spawningCoroutine;
+    private Coroutine teleportingCoroutine;
+    private EnemyAttackController currentattackController;
 
     private void Awake()
-    {   
+    {
         audioController = FindAnyObjectByType<AudioController>();
 
         teleportControl = GetComponent<TeleportControl>();
         spawningControl = GetComponent<SpawningControl>();
+
+        currentattackController = fase1Pattern;
+
         StartCoroutine(TestSequence());
     }
 
@@ -34,8 +39,10 @@ public class BossTriggers : MonoBehaviour
         {
             fase1Pattern.DeactivateAttackSequence();
             fase1Pattern.enabled = false;
+
             fase2Pattern.enabled = true;
             fase2Pattern.ActivateAttackSequence();
+            currentattackController = fase2Pattern;
             // Comeca a teleportar
             teleportCoroutine = StartCoroutine(UseTeleport());
         }
@@ -43,8 +50,10 @@ public class BossTriggers : MonoBehaviour
         {
             fase2Pattern.DeactivateAttackSequence();
             fase2Pattern.enabled = false;
+
             fase3Pattern.enabled = true;
             fase3Pattern.ActivateAttackSequence();
+            currentattackController = fase3Pattern;
             // Comeca a spawnar inimigos
             StartCoroutine(UseSpawn());
         }

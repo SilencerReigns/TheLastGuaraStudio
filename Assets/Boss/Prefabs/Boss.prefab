@@ -131,7 +131,7 @@ MonoBehaviour:
     overrideProjectileAttributes: 0
     burstSize: 1
     waitUntilPreviousAttackEnds: 1
-    startDelay: 2
+    startDelay: 3
     duration: 5
     timeBetweenRepetitions: 1
     initialSpeed: 1
@@ -141,6 +141,7 @@ MonoBehaviour:
     radius: 10
   numberOfColums: 5
   player: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &441216059192132353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +159,7 @@ MonoBehaviour:
     overrideProjectileAttributes: 0
     burstSize: 100
     waitUntilPreviousAttackEnds: 1
-    startDelay: 1
+    startDelay: 5
     duration: 5
     timeBetweenRepetitions: 1
     initialSpeed: 0
@@ -170,9 +171,9 @@ MonoBehaviour:
     overrideProjectileAttributes: 0
     burstSize: 1
     waitUntilPreviousAttackEnds: 1
-    startDelay: 1
+    startDelay: 0
     duration: 5
-    timeBetweenRepetitions: 0.2
+    timeBetweenRepetitions: 1
     initialSpeed: 0
     damage: 0
     turnRate: 0
@@ -180,6 +181,7 @@ MonoBehaviour:
     radius: 0
   numberOfColums: 5
   player: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &3681041138637629011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +199,7 @@ MonoBehaviour:
     overrideProjectileAttributes: 0
     burstSize: 100
     waitUntilPreviousAttackEnds: 1
-    startDelay: 1
+    startDelay: 3
     duration: 5
     timeBetweenRepetitions: 1
     initialSpeed: 0
@@ -209,9 +211,9 @@ MonoBehaviour:
     overrideProjectileAttributes: 0
     burstSize: 1
     waitUntilPreviousAttackEnds: 1
-    startDelay: 1
+    startDelay: 0
     duration: 5
-    timeBetweenRepetitions: 0.2
+    timeBetweenRepetitions: 0.5
     initialSpeed: 0
     damage: 0
     turnRate: 0
@@ -219,6 +221,7 @@ MonoBehaviour:
     radius: 0
   numberOfColums: 5
   player: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &6548422014631127862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,18 +235,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthBar
   triggerScript: {fileID: 837440924225562059}
-  backgroundBar: {fileID: 0}
-  chunkBar: {fileID: 0}
-  fillBar: {fileID: 0}
+  bossBar: {fileID: 0}
   effectsScript: {fileID: 0}
   bossTexture: {fileID: 0}
   c1: {fileID: 3873507296912218377}
   c2: {fileID: 441216059192132353}
   c3: {fileID: 3681041138637629011}
-  maxLenght: 1750
   maxHealth: 6000
   DecayDuration: 0.5
-  ChunkDelay: 0.25
   hitFlashDuration: 0.1
   Triggers:
   - 75
@@ -264,8 +263,8 @@ MonoBehaviour:
   fase2Pattern: {fileID: 441216059192132353}
   fase3Pattern: {fileID: 3681041138637629011}
   audioController: {fileID: 0}
-  teleportInterval: 5
-  spawnInterval: 6
+  teleportInterval: 12
+  spawnInterval: 20
 --- !u!114 &7946400058165122392
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -110,6 +110,12 @@ public class HealthBar : MonoBehaviour
         yield return new WaitForSecondsRealtime(3f);
         sprite.DOFade(0f, 1f).SetUpdate(true);
         Destroy(this.gameObject);
-    } 
-    
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("PlayerAttack"))
+        {
+            Debug.Log("BOSS ATACADO!");
+        }
+    }
 }
