@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8451380673407882268}
   - component: {fileID: 5337701164183664824}
-  - component: {fileID: 1117479433865938055}
   - component: {fileID: 844109631788783114}
   - component: {fileID: 9074833722687061109}
+  - component: {fileID: 7260971329651023933}
   m_Layer: 0
   m_Name: enemyMelee
   m_TagString: Enemy
@@ -94,24 +94,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1117479433865938055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3580908241530974550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d19832f6c63b545448cfbba7033959d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Movimento
-  playerPosition: {fileID: 0}
-  speed: 4
-  stunTime: 2
-  repelDistance: 3
-  damageAmount: 10
-  isStunned: 0
 --- !u!58 &844109631788783114
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -161,3 +143,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 50
+--- !u!114 &7260971329651023933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3580908241530974550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19832f6c63b545448cfbba7033959d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeMove
+  speed: 5
+  stunTime: 2
+  repelDistance: 3
+  isStunned: 0

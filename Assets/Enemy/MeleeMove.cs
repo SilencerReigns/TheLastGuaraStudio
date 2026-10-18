@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class MeleeMove : MonoBehaviour
 {
-    [SerializeField] private Transform playerPosition;
+    // O ponto de referência do jogador é mantido privado e fixo via script
+    private Transform playerPosition;
 
     [SerializeField] private float speed = 5f;
     [SerializeField] public float stunTime = 2f;
     [SerializeField] private float repelDistance = 3f;
-    [SerializeField] private float damageAmount = 10f; // Quantidade de dano configurável no Inspector
 
     public bool isStunned = false;
     private bool isRepelled = false;
+
+    void Start()
+    {
+        // Busca o GameObject pelo caminho fixo na hierarquia da cena
+        GameObject targetObj = GameObject.Find("PlayerRF/Body/Hitbox");
+
+        if (targetObj != null)
+        {
+            playerPosition = targetObj.transform;
+        }
+        else
+        {
+            Debug.LogError("RangeMove: O caminho 'PlayerRF/Body/Hitbox' não foi encontrado na cena!");
+        }
+    }
 
     void Update()
     {
@@ -26,10 +41,11 @@ public class MeleeMove : MonoBehaviour
     {
         if (playerPosition == null) return;
 
-        // Movimento normal em direção ao jogador em 2D
-        var movement = playerPosition.position - transform.position;
-        movement = movement.normalized * Time.deltaTime * speed;
-        transform.position += movement;
+        // Persegue a posição X e Y do jogador (mantendo apenas o Z do próprio objeto)
+        Vector3 targetPosition = new Vector3(playerPosition.position.x, playerPosition.position.y, transform.position.z);
+
+        // Move suavemente nos eixos X e Y
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 
     // Detecta o contato físico com o Player em 2D
@@ -37,48 +53,30 @@ public class MeleeMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Procura o script HealthPlayer no objeto do jogador com o qual colidiu
-            //HealthPlayer playerHealth = collision.gameObject.GetComponent<HealthPlayer>();
-
-            //if (playerHealth != null)
-            //{
-            //    playerHealth.TakeDamage(damageAmount); // Aplica o dano ao jogador
-            //}
-
             GetRepelled();
         }
     }
 
-    /* 
-    // Se estiver a usar o Collider com "Is Trigger" ativado no Inimigo ou no Player:
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            HealthPlayer playerHealth = other.GetComponent<HealthPlayer>();
-
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damageAmount);
-            }
-
-            GetRepelled();
-        }
-    }
-    */
-
-    // Repell System
+    // Repell System (Repulsão nos eixos X e Y)
     public void GetRepelled()
     {
         if (playerPosition == null || isRepelled) return;
 
         isRepelled = true;
 
-        // Calcula a direção oposta ao jogador no plano 2D
-        Vector2 directionAway = (transform.position - playerPosition.position).normalized;
-        Vector3 endPoint = transform.position + (Vector3)(directionAway * repelDistance);
+        // Calcula a direção oposta ao jogador
+        Vector2 direction = (transform.position - playerPosition.position).normalized;
 
-        // O DOTween faz a animação e só reativa o movimento normal ao terminar
+        // Caso estejam exatamente na mesma posição, define uma direção padrão
+        if (direction == Vector2.zero)
+        {
+            direction = Vector2.up;
+        }
+
+        // Calcula o ponto final empurrando para longe do jogador
+        Vector3 endPoint = transform.position + (Vector3)(direction * repelDistance);
+
+        // O DOTween faz a animação e reativa o movimento normal ao terminar
         transform.DOMove(endPoint, 0.5f).OnComplete(() =>
         {
             isRepelled = false;

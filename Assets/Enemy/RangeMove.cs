@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RangeMove : MonoBehaviour
 {
-    [SerializeField] private Transform playerPosition;
+    // O ponto de referência do jogador é mantido privado e fixo via script
+    private Transform playerPosition;
 
     [SerializeField] private float speed = 5f;
     [SerializeField] public float stunTime = 2f;
@@ -12,6 +13,21 @@ public class RangeMove : MonoBehaviour
 
     public bool isStunned = false;
     private bool isRepelled = false;
+
+    void Start()
+    {
+        // Busca o GameObject pelo caminho fixo na hierarquia da cena
+        GameObject targetObj = GameObject.Find("PlayerRF/Body/Hitbox");
+
+        if (targetObj != null)
+        {
+            playerPosition = targetObj.transform;
+        }
+        else
+        {
+            Debug.LogError("RangeMove: O caminho 'PlayerRF/Body/Hitbox' não foi encontrado na cena!");
+        }
+    }
 
     void Update()
     {
@@ -40,17 +56,6 @@ public class RangeMove : MonoBehaviour
             GetRepelled();
         }
     }
-
-    /* 
-    // Se o Collider estiver marcado como "Is Trigger", use este método:
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            GetRepelled();
-        }
-    }
-    */
 
     // Repell System (Repulsão apenas no eixo Y)
     public void GetRepelled()
