@@ -63,8 +63,8 @@ public class SpawningControl : MonoBehaviour
 
             Vector3 candidate = origin.position + new Vector3(
                 Mathf.Cos(angle) * distance,
-                heightOffset,
-                Mathf.Sin(angle) * distance
+                Mathf.Sin(angle) * distance,
+                0
             );
 
             foundSpots.Add(candidate);

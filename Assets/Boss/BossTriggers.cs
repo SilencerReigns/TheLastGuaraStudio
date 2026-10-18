@@ -25,6 +25,7 @@ public class BossTriggers : MonoBehaviour
 
         teleportControl = GetComponent<TeleportControl>();
         spawningControl = GetComponent<SpawningControl>();
+        StartCoroutine(TestSequence());
     }
 
     public void EnterFase(int i)
@@ -58,11 +59,20 @@ public class BossTriggers : MonoBehaviour
             locationIndex = aux;
         }
     }
-
     private IEnumerator UseSpawn()
     {
-        yield return new WaitForSeconds(spawnInterval);
-        spawningControl.SpawnMonsters();
+        while (true)
+        {
+            yield return new WaitForSeconds(spawnInterval);
+            spawningControl.SpawnMonsters();
+        }
     }
 
+    private IEnumerator TestSequence()
+    {
+        yield return new WaitForSeconds(5f);
+        EnterFase(1);
+        yield return new WaitForSeconds(15f);
+        EnterFase(2);
+    }
 }
