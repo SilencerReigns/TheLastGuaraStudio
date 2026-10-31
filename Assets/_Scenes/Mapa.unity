@@ -119,8 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD
-=======
 --- !u!1001 &60541343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,7 +184,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba02101372d94ec41a9381032692b95a, type: 3}
->>>>>>> c82b5ffdd7949f02d9ddc6a46580889cbf116803
 --- !u!1 &114991164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8204205380992436227, guid: b070354f97da11a469151dd12b43d075, type: 3}
@@ -519,8 +516,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
-<<<<<<< HEAD
-=======
 --- !u!1001 &562626477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -586,7 +581,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba02101372d94ec41a9381032692b95a, type: 3}
->>>>>>> c82b5ffdd7949f02d9ddc6a46580889cbf116803
 --- !u!1 &609772772
 GameObject:
   m_ObjectHideFlags: 0
@@ -105129,8 +105123,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
-<<<<<<< HEAD
-=======
 --- !u!1001 &1453126822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105196,7 +105188,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba02101372d94ec41a9381032692b95a, type: 3}
->>>>>>> c82b5ffdd7949f02d9ddc6a46580889cbf116803
 --- !u!1 &1501156844
 GameObject:
   m_ObjectHideFlags: 0
@@ -105269,9 +105260,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crab (1)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 8451380673407882268, guid: 32135417b4fd3f74f8c6860c054432bb, type: 3}
-=======
     - target: {fileID: 5337701164183664824, guid: ba02101372d94ec41a9381032692b95a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -105280,8 +105269,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8451380673407882268, guid: ba02101372d94ec41a9381032692b95a, type: 3}
->>>>>>> c82b5ffdd7949f02d9ddc6a46580889cbf116803
       propertyPath: m_LocalPosition.x
       value: 101.20584
       objectReference: {fileID: 0}
@@ -261752,15 +261739,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Devil
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 8451380673407882268, guid: ba02101372d94ec41a9381032692b95a, type: 3}
-=======
     - target: {fileID: 8233197374768531460, guid: 369af837c88446f428181b90a5b2f482, type: 3}
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8765616377375886147, guid: 369af837c88446f428181b90a5b2f482, type: 3}
->>>>>>> c82b5ffdd7949f02d9ddc6a46580889cbf116803
+    - target: {fileID: 8451380673407882268, guid: ba02101372d94ec41a9381032692b95a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.925476
       objectReference: {fileID: 0}
