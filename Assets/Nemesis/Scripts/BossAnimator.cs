@@ -36,7 +36,8 @@ public class BossAnimator : MonoBehaviour
     // Os métodos de ataque devolvem a duração da animação, para o controller esperar o fim dela
     public float PlayAttack1() => PlayAttack(attack1State);
 
-    public float PlayAttack2() => PlayAttack(attack2State);
+    // duration > 0: estica ou encurta a animação para durar esse tempo (usado na canalização do círculo)
+    public float PlayAttack2(float duration = 0f) => PlayAttack(attack2State, duration);
 
     public float PlayAttack3() => PlayAttack(attack3State);
 
@@ -66,14 +67,20 @@ public class BossAnimator : MonoBehaviour
         return GetClipLength(deathState);
     }
 
-    private float PlayAttack(string state)
+    private float PlayAttack(string state, float duration = 0f)
     {
         if (isDead) return 0f;
 
-        float length = GetClipLength(state);
+        float clipLength = GetClipLength(state);
+        float length = duration > 0f ? duration : clipLength;
+
         attackLockedUntil = Time.time + length;
         returnToIdleAt = Time.time + length;
         PlayState(state);
+
+        // ajusta a velocidade para a animação durar exatamente 'length' segundos
+        if (animator != null && length > 0f) animator.speed = clipLength / length;
+
         return length;
     }
 
@@ -81,6 +88,8 @@ public class BossAnimator : MonoBehaviour
     {
         if (animator == null) return;
 
+        // toda animação nova começa na velocidade normal (o ataque ajusta depois, se precisar)
+        animator.speed = 1f;
         animator.Play(state, 0, 0f);
     }
 

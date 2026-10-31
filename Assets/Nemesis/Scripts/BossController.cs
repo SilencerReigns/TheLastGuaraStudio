@@ -13,6 +13,10 @@ public class BossController : MonoBehaviour
     [Tooltip("Tempo entre a ativação e o primeiro ataque")]
     [SerializeField] private float firstAttackDelay = 1f;
 
+    [Header("Ataque 3 - Invocação")]
+    [Tooltip("Se desligado, o boss não ataca enquanto estiver inalvejável (esperando os inimigos morrerem)")]
+    [SerializeField] private bool attackWhileSummonsAlive = true;
+
     [Header("Ataque 1 - Rajada")]
     [Tooltip("Tempo de espera, depois que a rajada termina, até poder repetir")]
     [SerializeField] private float burstCooldown = 4f;
@@ -22,6 +26,8 @@ public class BossController : MonoBehaviour
     private BossHealth bossHealth;
     private BossAnimator bossAnimator;
     private BossBurstAttack burstAttack;
+    private BossCircleAttack circleAttack;
+    private BossSummonAttack summonAttack;
 
     private bool isActive;
     private bool isBusy;       // true durante qualquer ataque: nenhum outro pode começar
@@ -35,6 +41,8 @@ public class BossController : MonoBehaviour
         bossHealth = GetComponent<BossHealth>();
         bossAnimator = GetComponent<BossAnimator>();
         burstAttack = GetComponent<BossBurstAttack>();
+        circleAttack = GetComponent<BossCircleAttack>();
+        summonAttack = GetComponent<BossSummonAttack>();
     }
 
     private void OnEnable()
@@ -83,6 +91,7 @@ public class BossController : MonoBehaviour
         if (isBusy) return;
         if (playerHealth != null && playerHealth.IsDead) return;
         if (!IsPlayerInRange()) return;
+        if (!attackWhileSummonsAlive && bossHealth.IsInvulnerable) return;
 
         // Prioridade: invocação > círculo > rajada. Se algum limiar chegou durante outro ataque, ele espera aqui.
         if (pendingSummons > 0)
@@ -145,6 +154,7 @@ public class BossController : MonoBehaviour
         isBusy = false;
 
         if (burstAttack != null) burstAttack.ClearBullets();
+        if (circleAttack != null) circleAttack.Cancel();
 
         float length = bossAnimator.PlayDeath();
         bossHealth.HideBar();
@@ -186,26 +196,40 @@ public class BossController : MonoBehaviour
         isBusy = false;
     }
 
-    // ETAPA 3: aqui entra o círculo com canalização e morte instantânea
+    // Ataque 2: círculo com canalização e morte instantânea (BossCircleAttack)
     private IEnumerator CircleAttack()
     {
         isBusy = true;
-        Debug.Log("[Boss] Ataque 2: círculo (efeito entra na etapa 3)");
+        Debug.Log("[Boss] Ataque 2: círculo");
 
-        float length = bossAnimator.PlayAttack2();
-        yield return new WaitForSeconds(length);
+        if (circleAttack != null)
+        {
+            yield return StartCoroutine(circleAttack.Execute());
+        }
+        else
+        {
+            Debug.LogError("BossController: falta o componente BossCircleAttack no Nemesis.");
+            yield return new WaitForSeconds(bossAnimator.PlayAttack2());
+        }
 
         isBusy = false;
     }
 
-    // ETAPA 4: aqui entram a invocação e a invulnerabilidade
+    // Ataque 3: invocação de inimigos e boss inalvejável (BossSummonAttack)
     private IEnumerator SummonAttack()
     {
         isBusy = true;
-        Debug.Log("[Boss] Ataque 3: invocação (efeito entra na etapa 4)");
+        Debug.Log("[Boss] Ataque 3: invocação");
 
-        float length = bossAnimator.PlayAttack3();
-        yield return new WaitForSeconds(length);
+        if (summonAttack != null)
+        {
+            yield return StartCoroutine(summonAttack.Execute());
+        }
+        else
+        {
+            Debug.LogError("BossController: falta o componente BossSummonAttack no Nemesis.");
+            yield return new WaitForSeconds(bossAnimator.PlayAttack3());
+        }
 
         isBusy = false;
     }

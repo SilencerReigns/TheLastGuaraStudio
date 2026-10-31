@@ -219,6 +219,12 @@ public class MeleeMove : MonoBehaviour
         });
     }
 
+    // Usado pelo boss para os inimigos invocados perseguirem de qualquer distância
+    public void SetDetectionRange(float range)
+    {
+        detectionRange = range;
+    }
+
     // Stun System
     public void GetStunned()
     {

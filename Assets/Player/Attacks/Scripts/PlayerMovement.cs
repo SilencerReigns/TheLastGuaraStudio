@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     private float lastDashTime = -Mathf.Infinity;
 
-    // Variável para controlar a orientação do personagem
     private bool isFacingRight = true;
 
     private void Awake()
@@ -57,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
 
         moveInput = new Vector2(horizontal, vertical).normalized;
 
-        // Inverte o lado do personagem com base no Input Horizontal (apenas se não estiver a fazer Dash)
         if (!isDashing)
         {
             if (horizontal > 0f && !isFacingRight)
@@ -89,7 +87,6 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(newPosition);
     }
 
-    // Método responsável por inverter a escala no eixo X
     private void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -180,6 +177,4 @@ public class PlayerMovement : MonoBehaviour
         if (locked)
         {
             moveInput = Vector2.zero;
-        }
-    }
-}
+}   }   }
